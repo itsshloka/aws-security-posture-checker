@@ -1,0 +1,41 @@
+{
+  "scan_timestamp": "2026-07-04T18:00:00+00:00",
+  "summary": {
+    "HIGH": 2,
+    "MEDIUM": 3,
+    "LOW": 0,
+    "ERROR": 0
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "check": "s3_public_acl",
+      "resource": "demo-public-bucket",
+      "detail": "Bucket 'demo-public-bucket' grants access to http://acs.amazonaws.com/groups/global/AllUsers"
+    },
+    {
+      "severity": "HIGH",
+      "check": "sg_open_to_world",
+      "resource": "sg-0a1b2c3d",
+      "detail": "Security group 'demo-ssh-sg' (sg-0a1b2c3d) opens port 22 to 0.0.0.0/0"
+    },
+    {
+      "severity": "MEDIUM",
+      "check": "iam_stale_access_key",
+      "resource": "demo-user/AKIAEXAMPLEKEY",
+      "detail": "Access key is 214 days old (threshold: 90)."
+    },
+    {
+      "severity": "MEDIUM",
+      "check": "s3_block_public_access_disabled",
+      "resource": "demo-data-bucket",
+      "detail": "Bucket 'demo-data-bucket' does not fully block public access: {'BlockPublicAcls': False, 'IgnorePublicAcls': True, 'BlockPublicPolicy': False, 'RestrictPublicBuckets': True}"
+    },
+    {
+      "severity": "MEDIUM",
+      "check": "sg_open_to_world",
+      "resource": "sg-0d4e5f6g",
+      "detail": "Security group 'demo-web-sg' (sg-0d4e5f6g) opens port 8080 to 0.0.0.0/0"
+    }
+  ]
+}
