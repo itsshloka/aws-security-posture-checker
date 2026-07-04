@@ -43,7 +43,7 @@ The scanning user/role needs at minimum:
 No write permissions are required — this tool only reads configuration, it does not remediate.
 
 ## Sample output
-
+![AWS scan output](screenshots/aws-scan-output.png)
 See [`reports/sample_scan_result.json`](reports/sample_scan_result.json) for an example report against a demo account. Console output looks like:
 
 ```
@@ -62,7 +62,7 @@ Full report written to: reports/scan_result.json
 ```
 
 ## Running tests
-
+![Pytest results](screenshots/pytest-results.png)
 Tests use mocked AWS clients (`unittest.mock`), so no real AWS account or credentials are needed:
 
 ```bash
