@@ -1,0 +1,17 @@
+{
+  "scan_timestamp": "2026-07-04T22:49:24.131787+00:00",
+  "summary": {
+    "HIGH": 0,
+    "MEDIUM": 1,
+    "LOW": 0,
+    "ERROR": 0
+  },
+  "findings": [
+    {
+      "severity": "MEDIUM",
+      "check": "s3_block_public_access_disabled",
+      "resource": "nova9-website",
+      "detail": "Bucket 'nova9-website' does not fully block public access: {'BlockPublicAcls': False, 'IgnorePublicAcls': False, 'BlockPublicPolicy': False, 'RestrictPublicBuckets': False}"
+    }
+  ]
+}
